@@ -1,6 +1,6 @@
 <?php
 
-namespace Rocketchatchannel\Types;
+namespace Roes\RocketChatChannel\Types;
 
 class Table
 {
