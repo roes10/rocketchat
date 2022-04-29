@@ -6,7 +6,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Rocketchatchannel\\": "src/"
+            "Roes\\RocketChatChannel\\": "src/"
         }
     },
     "authors": [
@@ -15,5 +15,7 @@
             "email": "ramon.oestreich@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
 }
