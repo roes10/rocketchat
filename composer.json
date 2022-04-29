@@ -1,0 +1,17 @@
+{
+    "name": "roestreich/rocketchatchannel",
+    "description": "package to send messages in rocket chat channels",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Roestreich\\Rocketchatchannel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ramon Oestreich",
+            "email": "ramon.oestreich@gmail.com"
+        }
+    ],
+    "require": {}
+}
