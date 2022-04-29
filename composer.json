@@ -1,6 +1,8 @@
 {
     "name": "roestreich/rocketchatchannel",
     "description": "package to send messages in rocket chat channels",
+    "type": "library",
+    "keywords": ["rocketchat","channel", "messages"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
