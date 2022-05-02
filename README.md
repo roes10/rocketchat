@@ -1,6 +1,11 @@
 # rocketchatchannel
 It is a simple package for sending messages using rocket chat channels. This is very simple and without many dependencies.
 
+How to install 
+```php
+composer require roestreich/rocketchatchannel
+```
+
 How to use 
 
 # Create a new instance of Message
