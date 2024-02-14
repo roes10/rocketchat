@@ -1,17 +1,12 @@
 <?php
 
-namespace Roes\RocketChatChannel\Types;
+namespace RoesTen\RocketChat\Types;
 
 class Table
 {
-    /**
-     * @var array
-     */
-    private $headers;
-    /**
-     * @var array
-     */
-    private $body;
+    private array $headers;
+
+    private array $body;
 
     public function __construct(array $headers, array $body)
     {
@@ -19,7 +14,7 @@ class Table
         $this->body = $body;
     }
 
-    private function head()
+    private function head(): string
     {
         $headTitle = '|';
         $divisor = '|';
@@ -34,7 +29,7 @@ class Table
         return $headTitle . $divisor;
     }
 
-    private function body()
+    private function body(): string
     {
         $bodyPipe = '|';
         foreach ($this->body as $bodyIndex) {
@@ -44,7 +39,7 @@ class Table
         return $bodyPipe;
     }
 
-    public function create()
+    public function create(): string
     {
         return $this->head() . $this->body();
     }

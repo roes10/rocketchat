@@ -1,137 +1,90 @@
 <?php
-
-namespace Roes\RocketChatChannel;
+declare(strict_types=1);
+namespace RoesTen\RocketChat;
 
 class Message
 {
-    /**
-     * @var bool
-     */
-    private $important = false;
 
-    /**
-     * @var string
-     */
-    private $title;
+    private bool $important = false;
 
-    /**
-     * @var bool
-     */
-    private $success = false;
+    private string $title;
 
-    /**
-     * @var string
-     */
-    private $text;
+    private bool $success = false;
 
-    /**
-     * @var string
-     */
-    private $reference;
+    private string $text;
 
-    /**
-     * @var string
-     */
-    private $channel = null;
+    private string $reference;
 
-    /**
-     * @return bool
-     */
-    public function getImportant()
+    private ?string $channel = null;
+
+    public function getImportant(): bool
     {
         return $this->important;
     }
 
-    /**
-     * @param bool $important
-     */
-    public function setImportant($important)
+
+    public function setImportant(bool $important)
     {
         $this->important = $important;
+        return $this;
     }
 
-    /**
-     * @return bool
-     */
-    public function getSuccess()
+    public function getSuccess(): bool
     {
         return $this->success;
     }
 
-    /**
-     * @param bool $success
-     */
-    public function setSuccess($success)
+    public function setSuccess(bool $success)
     {
         $this->success = $success;
+        return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getText()
+    public function getText(): string
     {
         return $this->text;
     }
 
-    /**
-     * @param string $text
-     */
-    public function setText($text)
+    public function setText(string $text)
     {
         $this->text = $text;
+        return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    /**
-     * @param string $title
-     */
-    public function setTitle($title)
+    public function setTitle(string $title)
     {
         $this->title = $title;
+        return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getReference()
+    public function getReference(): string
     {
         return $this->reference;
     }
 
-    /**
-     * @param string $reference
-     */
-    public function setReference($reference)
+    public function setReference(string $reference)
     {
         $this->reference = $reference;
+        return $this;
     }
 
-    /**
-     * @return string
-     */
-
-    public function getChannel()
+    public function getChannel(): ?string
     {
         return $this->channel;
     }
 
-    /**
-     * @param string $channel
-     */
-    public function setChannel($channel)
+    public function setChannel(string $channel)
     {
         $this->channel = $channel;
+        return $this;
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'title' => $this->getTitle(),

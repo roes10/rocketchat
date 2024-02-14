@@ -1,60 +1,28 @@
 <?php
 
 
-namespace Roes\RocketChatChannel;
+namespace RoesTen\RocketChat;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
 class RocketChat
 {
-    /**
-     * @var string
-     */
-    private $authToken;
-    /**
-     * @var string
-     */
-    private $userId;
-    /**
-     * @var string
-     */
-    private $baseUrl;
-
-
-    /**
-     * RocketChat constructor.
-     * @param string $baseUrl
-     * @param string $authToken
-     * @param string $userId
-     */
-    public function __construct($baseUrl,$authToken, $userId)
+    public function __construct(private string $baseUrl, private string $authToken, private string $userId)
     {
-        $this->authToken = $authToken;
-        $this->userId = $userId;
-        $this->baseUrl = $baseUrl;
     }
 
-    /**
-     * @return string
-     */
-    public function getBaseUrl()
+    public function getBaseUrl(): string
     {
         return $this->baseUrl;
     }
 
-    /**
-     * @return string
-     */
-    public function getAuthToken()
+    public function getAuthToken(): string
     {
         return $this->authToken;
     }
 
-    /**
-     * @return string
-     */
-    public function getUserId()
+    public function getUserId(): string
     {
         return $this->userId;
     }

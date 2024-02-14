@@ -1,22 +1,22 @@
 {
-    "name": "roestreich/rocketchatchannel",
+    "name": "roesten/rocketchat",
     "description": "package to send messages in rocket chat channels",
     "type": "library",
-    "keywords": ["rocketchat","channel", "messages"],
+    "keywords": ["rocketchat","notifications", "messages","laravel","rocket-chat","chat","notification-channel"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Roes\\RocketChatChannel\\": "src/"
+            "RoesTen\\RocketChat\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Ramon Oestreich",
-            "email": "ramon.oestreich@gmail.com"
+            "name": "roesten",
+            "email": "didio50@hotmail.com"
         }
     ],
     "require": {
-        "php": "^7.0|^8.0",
+        "php": "^8.0",
         "guzzlehttp/guzzle": "^7.0"
     }
 }

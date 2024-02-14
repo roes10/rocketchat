@@ -1,7 +1,7 @@
 <?php
 
-
-namespace Roes\RocketChatChannel\Types;
+declare(strict_types=1);
+namespace RoesTen\RocketChat\Types;
 
 class Markdown
 {
@@ -10,7 +10,7 @@ class Markdown
      * @param array $body
      * @return string
      */
-    public static function table(array $headers, array $body)
+    public static function table(array $headers, array $body): string
     {
         return (new Table($headers, $body))->create();
     }
@@ -19,22 +19,22 @@ class Markdown
      * @param string $string
      * @return string
      */
-    public static function bold($string)
+    public static function bold(string $string): string
     {
         return '**' . $string . '**';
     }
 
     /**
-     * @param $heading
+     * @param string $heading
      * @param int $type
      * @return string
      */
-    public static function headings($heading, $type)
+    public static function headings(string $heading, int $type): string
     {
         return trim(str_repeat('#', $type)) . ' ' . $heading;
     }
 
-    public static function listItem(array $list)
+    public static function listItem(array $list): string
     {
         return '- ' . implode("\n-", $list);
     }
@@ -44,7 +44,7 @@ class Markdown
      * @param string $highlighting
      * @return string
      */
-    public static function codeBlock($code, $highlighting = 'sh')
+    public static function codeBlock(string $code, string $highlighting = 'sh'): string
     {
         $start = "```" . $highlighting . PHP_EOL;
         $end = "```";
